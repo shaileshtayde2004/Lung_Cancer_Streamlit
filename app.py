@@ -383,9 +383,6 @@ if st.button('🔍 Get PulmoNova AI Prediction'):
         st.success(heart_diagnosis)
 
 
-expander = st.expander("Here are some more random values from Test Set")
-
-expander.write(concate_data.head(5))
     
 
     
