@@ -370,16 +370,17 @@ if (selection == 'Lung Cancer Prediction'):
         heart_prediction = cancer_model.predict([[Age, Gender, AirPollution, Alcoholuse, BalancedDiet, Obesity, Smoking, PassiveSmoker, Fatigue, WeightLoss,ShortnessofBreath, Wheezing, SwallowingDifficulty,ClubbingofFingerNails, FrequentCold, DryCough, Snoring]])                          
         
         if (heart_prediction[0] == 'High'):
-          heart_diagnosis = 'The person is having heart disease'
-          st.error(heart_diagnosis)
+    heart_diagnosis = 'High risk of lung cancer based on the model prediction.'
+    st.error(heart_diagnosis)
 
-        elif(heart_prediction[0] == 'Medium'):
-          heart_diagnosis = 'The person is chance of having heart disease'
-          st.warning(heart_diagnosis)
-        else:
-          heart_diagnosis = 'The person does not have any heart disease'
-          st.balloons()
-          st.success(heart_diagnosis)
+elif(heart_prediction[0] == 'Medium'):
+    heart_diagnosis = 'Moderate risk of lung cancer based on the model prediction.'
+    st.warning(heart_diagnosis)
+
+else:
+    heart_diagnosis = 'Low risk of lung cancer based on the model prediction.'
+    st.balloons()
+    st.success(heart_diagnosis)
         
         
 
