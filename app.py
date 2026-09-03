@@ -41,6 +41,8 @@ if (selection == 'Introduction'):
 
     st.image(gg, caption='Introduction to Lung Cancer',width=600)
     #page title
+    st.title('🫁 PulmoNova AI')
+    st.subheader('Intelligent Lung Cancer Detection & Prediction System')
     st.title('How common is lung cancer?')
 
     st.write("Lung cancer (both small cell and non-small cell) is the second most common cancer in both men and women in the United States (not counting skin cancer). In men, prostate cancer is more common, while in women breast cancer is more common.")
