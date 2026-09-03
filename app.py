@@ -362,31 +362,30 @@ if (selection == 'Lung Cancer Prediction'):
         Snoring = st.text_input('Snoring  ', key="17",value=q)
  
     # code for Prediction
-    heart_diagnosis = ''
-    
-    # creating a button for Prediction
-    
-    if st.button('🔍 Get PulmoNova AI Prediction'):
-        heart_prediction = cancer_model.predict([[Age, Gender, AirPollution, Alcoholuse, BalancedDiet, Obesity, Smoking, PassiveSmoker, Fatigue, WeightLoss,ShortnessofBreath, Wheezing, SwallowingDifficulty,ClubbingofFingerNails, FrequentCold, DryCough, Snoring]])                          
-        
-    if (heart_prediction[0] == 'High'):
-            heart_diagnosis = 'High risk of lung cancer based on the model prediction.'
-            st.error(heart_diagnosis)
+heart_diagnosis = ''
 
-    elif(heart_prediction[0] == 'Medium'):
-            heart_diagnosis = 'Moderate risk of lung cancer based on the model prediction.'
-            st.warning(heart_diagnosis)
+# creating a button for Prediction
+
+if st.button('🔍 Get PulmoNova AI Prediction'):
+    heart_prediction = cancer_model.predict([[Age, Gender, AirPollution, Alcoholuse, BalancedDiet, Obesity, Smoking, PassiveSmoker, Fatigue, WeightLoss, ShortnessofBreath, Wheezing, SwallowingDifficulty, ClubbingofFingerNails, FrequentCold, DryCough, Snoring]])
+
+    if (heart_prediction[0] == 'High'):
+        heart_diagnosis = 'High risk of lung cancer based on the model prediction.'
+        st.error(heart_diagnosis)
+
+    elif (heart_prediction[0] == 'Medium'):
+        heart_diagnosis = 'Moderate risk of lung cancer based on the model prediction.'
+        st.warning(heart_diagnosis)
 
     else:
-            heart_diagnosis = 'Low risk of lung cancer based on the model prediction.'
-            st.balloons()
-            st.success(heart_diagnosis)
-        
-        
+        heart_diagnosis = 'Low risk of lung cancer based on the model prediction.'
+        st.balloons()
+        st.success(heart_diagnosis)
 
-    expander = st.expander("Here are some more random values from Test Set")
-    
-    expander.write(concate_data.head(5))
+
+expander = st.expander("Here are some more random values from Test Set")
+
+expander.write(concate_data.head(5))
     
 
     
