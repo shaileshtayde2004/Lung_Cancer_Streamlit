@@ -15,7 +15,8 @@ from tensorflow.keras.preprocessing import image
 from streamlit_option_menu import option_menu
 st.set_page_config(page_title='PulmoNova AI'
                   page_icon='🫁',
-                  layout='wide')
+                  layout='wide'
+)
 #Loading models
 cancer_model = pickle.load(open('models/final_model.sav', 'rb'))
 
