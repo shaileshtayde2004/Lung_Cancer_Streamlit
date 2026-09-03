@@ -383,12 +383,6 @@ if st.button('🔍 Get PulmoNova AI Prediction'):
         st.success(heart_diagnosis)
 
 
-    
-
-    
-        
-   
-
 if (selection == 'CNN Based disease Prediction'):
   st.set_option('deprecation.showfileUploaderEncoding', False)
   @st.cache(allow_output_mutation=True)
