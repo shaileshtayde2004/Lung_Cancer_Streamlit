@@ -402,9 +402,8 @@ if (selection == 'CNN Based disease Prediction'):
     return model_loader
 
   cnn = loading_model()
-  st.write("""
-  # Lung Cancer Detection using CNN and CT-Scan Images
-  """)
+  st.title('🫁 PulmoNova AI')
+  st.subheader('CNN-Based Lung Cancer Screening from CT-Scan Images')
 
 
 
