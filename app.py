@@ -276,7 +276,8 @@ if (selection == 'Lung Cancer Prediction'):
     
     
 
-    st.title('Lung Cancer Prediction using ML')
+    st.title('🫁 PulmoNova AI')
+    st.subheader('Lung Cancer Risk Prediction using Machine Learning')
 
     idn = st.slider('Select any index from Testing Data', 0, 200, 25)
     a=concate_data.iloc[idn]
